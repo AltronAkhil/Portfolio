@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <nav>
+                <ul data-aos="flip-up"data-aos-duration="600" class="desktop-menu">
+                    <li><a href="index.html">Altron</a></li>
+                    <li class="HideOnMobile"><a href="#about">About</a></li>
+                    <li class="HideOnMobile"><a href="#tools">Tools</a></li>
+                    <li class="HideOnMobile"><a href="#contact">Contact</a></li>
+                    <li onclick="sidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+                <ul class="mobile-menu">
+                    <li onclick="sidebarclose()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+    <!-- Main -->
+    <section class="main">
+        <div class="hero">
+            
+            <div data-aos="fade-up"
+                data-aos-duration="900" class="hero-image">
+                <img class="char" src="elements/main.png" alt="character">   
+            </div> 
+            <div  class="hero-text">
+                <h1 data-aos="fade-right"
+                data-aos-offset="100"
+                data-aos-duration="900" class="titl">Hi, I'm <span style="color: rgb(204, 25, 25);">AKHIL</span></h1>
+                <p data-aos="fade-right"
+                data-aos-offset="100"
+                data-aos-duration="900" class="disc">I'm a Web Developer</p>
+            </div>     
+        </div>
+    </section>
+    <section id="about">
+        <div class="page2">
+            <div class="content">
+                <div data-aos="zoom-in" class="logo">
+                    <img src="elements/logo.jpg" alt="logo">
+                </div>
+                <div class="info">
+                    <h2 data-aos="zoom-in-up" data-aos-duration="900" class="tools">About <span style="color: #ff2e2e;">Me</span></h2>
+                    <p data-aos="zoom-in-up"data-aos-duration="900">Hi, I’m <span style="color: #ff2e2e;"><b>Akhil</b></span>, a <b>BCA</b>  student from </b> Bangalore</b>  with a passion for <b>AI</b>, <b>automation</b>, and <b>full-stack</b> development. I enjoy turning ideas into practical projects and constantly learning new technologies to improve my skills. I work on building intelligent tools like personal assistants, and interactive web applications that make tasks faster and smarter.I’m always exploring new frameworks, improving my coding abilities, and taking up challenging projects that help me grow as a developer. My goal is to become a versatile engineer who can build powerful AI-driven solutions and innovative digital experiences.</p>
+                    <p data-aos="zoom-in-up"data-aos-duration="900">I’m currently pursuing <b>Bachelor of Computer Applications</b>, learning:
+                        <br><b>Programming (Python, JS, C)</b>
+                        <br><b>Data structures & algorithms</b>
+                        <br><b>Web development</b>
+                        <br><b>Databases</b></p>
+                </div>                        
+            </div>
+        </div>
+    </section>
+    <section id="tools">
+        <h2 data-aos="zoom-in-right"data-aos-duration="900" class="tools">T<span style="color: #ff2e2e;">oo</span>ls</h2>
+        <div class="container2">
+            <!-- Percentage Calculator -->
+            <div data-aos="flip-left"data-aos-duration="900" class="card">
+            <h2>Percentage Calculator</h2>
+            <input type="number" id="value" placeholder="Enter value" />
+            <input type="number" id="percent" placeholder="Enter percentage" />
+            <button onclick="calculatePercentage()">Calculate</button>
+            <p id="percentResult"></p>
+            </div>
+
+
+            <!-- Age Calculator -->
+            <div  data-aos="flip-right"data-aos-duration="900" class="card">
+            <h2>Age Calculator</h2>
+            <input type="date" id="dob" />
+            <button onclick="calculateAge()">Calculate Age</button>
+            <p id="ageResult"></p>
+            </div>
+
+
+            <!-- Normal Calculator -->
+            <div data-aos="flip-left"data-aos-duration="900" class="card">
+            <h2>Simple Calculator</h2>
+            <input type="text" id="calcScreen" placeholder="0" />
+            <button onclick="calcScreen.value=''">Clear</button>
+            <button onclick="calculateResult()">=</button>
+            </div>
+
+
+            <!-- Mini Game 1: Number Guess -->
+            <div  data-aos="flip-right"data-aos-duration="900" class="card">
+            <h2>Guess the Number</h2>
+            <input type="number" id="guessInput" placeholder="Enter guess (1-10)" />
+            <button onclick="guessNumber()">Guess</button>
+            <p id="guessResult"></p>
+            </div>
+
+
+            <!-- Mini Game 2: Click Counter -->
+            <div data-aos="flip-left"data-aos-duration="900" class="card">
+            <h2>Click Speed Game</h2>
+            <button onclick="clickGame()">Click Me!</button>
+            <button onclick="reset()">Reset</button>
+            <p id="clickResult">Clicks: 0</p>
+            </div>
+        </div>
+
+    </section>
+    <section id="contact">
+        <div class="contact-me">     
+            <div class="hero-2">
+                <img src="elements/main2.png" alt="character2">
+            </div>
+            <div data-aos="zoom-in-left"data-aos-duration="900" class="item">
+                    <h2>Contact <span style="color: #ff2e2e;">Me</span></h2>
+                <form>
+                    <input type="text" id="name" placeholder="Your Name" required />
+                    <input type="email" id="email" placeholder="Your Email" required />
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <button type="button" onclick="sendEmail()">Submit</button>
+                </form>
+                <div class="hero-icons">
+                    <button class="btn" onclick="downloadImage()">Download CV</button>
+                    <ul class="sm-icons">
+                        <li><a href="https://www.instagram.com/altron_akhil_007/"><i class='bx bxl-instagram-alt'></i></a></li>
+                        <li><a href="https://github.com/AltronAkhil"><i class='bx bxl-github' ></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/akhilesh-v-154475374/"><i class='bx bxl-linkedin' ></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
